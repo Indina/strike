@@ -1,1 +1,3 @@
 # strike
+
+En kul app
