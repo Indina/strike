@@ -1,0 +1,43 @@
+<ion-header >
+  <ion-navbar style="    background-color: #f30648;">
+    <ion-title>
+  
+  <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
+    </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content *ngFor="let strikeItem of strike | async">
+<ion-card >
+
+  <div style="background-color:#f30648;width:130px;height:40px; border-radius:20px;    position: absolute;
+           top: 47%;
+    left: 59%;">
+    <div style="    position: relative;
+    top: 10px;
+    left: 18px;">
+<ion-avatar item-left>
+      <img style=" border-radius: 0;
+    overflow: hidden;width: 20px; float: left;margin-right: 5px;" src="assets/images/like.svg">
+    </ion-avatar> <span style=" float: left;color: #fff;">  {{strikeItem.points}} points</span>
+</div>
+  </div>
+  <img src="assets/images/strike1.jpg"/>
+
+  <ion-card-content >
+    <ion-card-title>
+      Ice bucket challenge
+      </ion-card-title>
+    <p>
+      {{strikeItem.description}}
+    </p>
+
+      <p style="font-weight:bold; margin-top:10px;">
+      3 other friends has resived this challenge
+      
+    </p>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>

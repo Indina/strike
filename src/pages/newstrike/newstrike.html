@@ -1,0 +1,56 @@
+<ion-header >
+  <ion-navbar style="    background-color: #f30648;">
+    <ion-title>
+  
+  <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
+    </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="sendto-content">
+
+<div class="image-upload" style="display: inline;">
+    <label for="file-input">
+      <img  style="    width: 100%;
+    height: 280px;
+    padding: 20px;
+    background-color: #e4e4e4;
+      display: inline;" src="assets/icon/photo-camera.svg"/>
+    </label>
+
+
+    <input id="file-input" type="file"/>
+</div>
+<ion-list>
+
+
+  <ion-item>
+    <ion-label color="primary">Tittel på Strike</ion-label>
+    <ion-input placeholder="...."></ion-input>
+  </ion-item>
+
+  <ion-item>
+       <ion-label color="primary" stacked>Bakgrunn</ion-label>
+    <ion-textarea placeholder="..."></ion-textarea>
+  </ion-item>
+  
+  </ion-list>
+  <ion-item>
+    <ion-label>Element Type</ion-label>
+    <ion-select [(ngModel)]="gaming">
+      <ion-option value="nes">Hjertesak</ion-option>
+      <ion-option value="n64">Velvær</ion-option>
+      <ion-option value="ps">Toxic</ion-option>
+      <ion-option value="genesis">Underholding</ion-option>
+      
+    </ion-select>
+  </ion-item>
+
+    
+<div>
+<button ion-button full>Lag ny strike</button>
+</div>
+
+
+</ion-content>
