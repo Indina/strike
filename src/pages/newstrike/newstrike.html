@@ -24,20 +24,56 @@
 </div>
 <ion-list>
 
-
-  <ion-item>
-    <ion-label color="primary">Tittel på Strike</ion-label>
-    <ion-input placeholder="...."></ion-input>
+<ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text"></ion-input>
   </ion-item>
 
+
   <ion-item>
-       <ion-label color="primary" stacked>Bakgrunn</ion-label>
+       <ion-label color="primary" stacked>Ingress</ion-label>
     <ion-textarea placeholder="..."></ion-textarea>
   </ion-item>
   
+
+
+
+<ion-list radio-group [(ngModel)]="autoManufacturers">
+
+  <ion-list-header>
+    Varighet
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>1 dag</ion-label>
+    <ion-radio value="cord"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>2 dager</ion-label>
+    <ion-radio value="duesenberg"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Hudson</ion-label>
+    <ion-radio value="hudson"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Packard</ion-label>
+    <ion-radio value="packard"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Studebaker</ion-label>
+    <ion-radio value="studebaker"></ion-radio>
+  </ion-item>
+
+</ion-list>
+
   </ion-list>
   <ion-item>
-    <ion-label>Element Type</ion-label>
+    <ion-label>Type</ion-label>
     <ion-select [(ngModel)]="gaming">
       <ion-option value="nes">Hjertesak</ion-option>
       <ion-option value="n64">Velvær</ion-option>
