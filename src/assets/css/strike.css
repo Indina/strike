@@ -76,3 +76,15 @@ ion-app.md {
     
     border-bottom: 0;
 }
+
+.segment-md .segment-button.segment-activated {
+    border-color: #f30648;
+    opacity: 1;
+}
+
+
+.segment-md .segment-button {
+    
+    color: #f30648;
+
+}
