@@ -15,6 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { StrikesComponent } from '../components/strikes/strikes';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCQKyGrADrwvWaXsBBqCqcx8DEbrtjhmoA",
@@ -36,8 +37,9 @@ export const firebaseConfig = {
     WallPage,
     StrikeGroupPage,
     NewStrikePage,
+    StrikesComponent,
 
-    
+
   ],
   imports: [
     BrowserModule,

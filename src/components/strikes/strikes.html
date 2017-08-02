@@ -1,12 +1,12 @@
-  
-   
+
+
 <ion-card *ngFor="let strikeListItem of strikeList | async">
 <ion-list>
   <ion-item-sliding #item>
-     <ion-item (click)="strikeGroup()"> 
-       
+     <ion-item (click)="strikeGroup()">
+
        <ion-avatar item-left>
-    
+
       <img style=" border-radius: 0;
     overflow: hidden;    width: 20px;
     height: 20px; " src="assets/icon/right-arrow.svg">
@@ -17,13 +17,13 @@
      <p style="position: absolute;right: 15px;">4 days left</p>
     <h2>{{strikeListItem.title}}</h2>
     <p>From Siripus</p>
- </ion-item> 
- 
+ </ion-item>
+
  <ion-item-options side="right">
       <button ion-button (click)="favorite(item)">Decline</button>
       <button ion-button color="danger" (click)="share(item)">  <img style="width:30px" src="assets/icon/forward-arrow.png">  </button>
     </ion-item-options>
-    
+
     </ion-item-sliding>
 </ion-list>
 

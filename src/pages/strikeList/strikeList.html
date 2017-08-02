@@ -1,7 +1,7 @@
 <ion-header >
   <ion-navbar style="    background-color: #f30648;">
     <ion-title>
-  
+
   <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
     </div>
     </ion-title>
@@ -13,11 +13,11 @@
       </button>
     </ion-buttons>
 
-    
+
   </ion-navbar>
 
 
-  
+
 </ion-header>
 
 <ion-content >
@@ -25,26 +25,25 @@
 
   <div padding>
   <ion-segment [(ngModel)]="pakker">
-    <ion-segment-button class="segment-button segment-activated" value="Strikes">
+    <ion-segment-button class="segment-button segment-activated" value="strikes">
       Strikes
     </ion-segment-button>
 
 
 
-    <ion-segment-button value="Russ">
+    <ion-segment-button value="russ">
       Russ
     </ion-segment-button>
   </ion-segment>
 </div>
 
 <div [ngSwitch]="pakker">
-  <ion-list *ngSwitchCase="'Russ'">
+  <ion-list *ngSwitchCase="'russ'">
     Test
   </ion-list>
 
-  <ion-list *ngSwitchCase="'Strikes'" >
-
-    
+  <ion-list *ngSwitchCase="'strikes'" >
+      <strikes></strikes>
   </ion-list>
 </div>
 
