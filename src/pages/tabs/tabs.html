@@ -1,8 +1,17 @@
 <ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+ <!-- <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab> -->
   <ion-tab [root]="tab2Root" tabTitle="Listpage" tabIcon="information-circle"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="Strike" tabIcon="contacts"></ion-tab>
-    <ion-tab [root]="tab4Root" tabTitle="Send" tabIcon="contacts"></ion-tab>
-    <ion-tab [root]="tab5Root" tabTitle="Group" tabIcon="contacts"></ion-tab>
-      <ion-tab [root]="tab7Root" tabTitle="Newstrike" tabIcon="contacts"></ion-tab>
+   
+   
+      
 </ion-tabs>
+ <ion-fab left bottom>
+    <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>

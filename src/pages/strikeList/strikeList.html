@@ -5,355 +5,49 @@
   <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
     </div>
     </ion-title>
+
+
+     <ion-buttons end>
+      <button ion-button icon-only (click)="newStrike()">
+       <img src="assets/icon/add.png">
+      </button>
+    </ion-buttons>
+
+    
   </ion-navbar>
+
+
+  
 </ion-header>
 
 <ion-content >
 
-<ion-card *ngFor="let strikeListItem of strikeList | async">
-<ion-list>
-  <ion-item-sliding #item>
-     <ion-item> 
-       
-       <ion-avatar item-left>
+
+  <div padding>
+  <ion-segment [(ngModel)]="pakker">
+    <ion-segment-button class="segment-button segment-activated" value="Strikes">
+      Strikes
+    </ion-segment-button>
+
+
+
+    <ion-segment-button value="Russ">
+      Russ
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pakker">
+  <ion-list *ngSwitchCase="'Russ'">
+    Test
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'Strikes'" >
+
     
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>{{strikeListItem.title}}</h2>
-    <p>From Siripus</p>
- </ion-item> 
- 
- <ion-item-options side="right">
-      <button ion-button (click)="favorite(item)">Decline</button>
-      <button ion-button color="danger" (click)="share(item)">  <img style="width:30px" src="assets/icon/forward-arrow.png">  </button>
-    </ion-item-options>
-    
-    </ion-item-sliding>
-</ion-list>
+  </ion-list>
+</div>
 
 
-</ion-card>
-
-
-
-
-<!--
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/like.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/like.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/biohazard-symbol.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>Workout</h2>
-    <p>From Siripus</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow-active.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>Workout</h2>
-    <p>From Siripus</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/like.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/biohazard-symbol.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>Workout</h2>
-    <p>From Siripus</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow-active.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>Workout</h2>
-    <p>From Siripus</p>
-  </ion-item>
-
-
-
-</ion-card>
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/like.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/biohazard-symbol.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>Workout</h2>
-    <p>From Siripus</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow-active.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>Workout</h2>
-    <p>From Siripus</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/like.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/biohazard-symbol.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>Workout</h2>
-    <p>From Siripus</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow-active.svg">
-     <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
-    </ion-avatar>
-     <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>Workout</h2>
-    <p>From Siripus</p>
-  </ion-item>
-
-
-
-</ion-card>-->
 
 </ion-content>
