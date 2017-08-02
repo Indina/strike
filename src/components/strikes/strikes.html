@@ -1,6 +1,6 @@
 
 
-<ion-card *ngFor="let strikeListItem of strikeList | async">
+<ion-card *ngFor="let strike of strikes | async">
 <ion-list>
   <ion-item-sliding #item>
      <ion-item (click)="strikeGroup()">
@@ -15,7 +15,7 @@
     height: 20px; " src="assets/icon/left-arrow.svg">
     </ion-avatar>
      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>{{strikeListItem.title}}</h2>
+    <h2>{{strike.title}}</h2>
     <p>From Siripus</p>
  </ion-item>
 
