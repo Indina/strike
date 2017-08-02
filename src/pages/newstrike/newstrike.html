@@ -29,14 +29,14 @@
 <ion-list>
 
 <ion-item>
-    <ion-label floating>Tittel</ion-label>
+    <ion-label  floating class="list-header">Tittel</ion-label>
     <ion-input type="text"></ion-input>
   </ion-item>
 
 
   <ion-item>
-       <ion-label  floating>Ingress</ion-label>
-    <ion-textarea ></ion-textarea>
+       <ion-label floating  class="list-header">Ingress</ion-label>
+    <ion-textarea style="min-height:200px" ></ion-textarea>
   </ion-item>
   
 
@@ -44,34 +44,45 @@
 
 <ion-list radio-group [(ngModel)]="autoManufacturers">
 
-  <ion-list-header class="primary">
+  <ion-list-header class="primary" >
     Element
   </ion-list-header>
-
+<div >
   <ion-item>
-    <ion-label>Hjertesak</ion-label>
+    <ion-label><img style=" border-radius: 0;
+    overflow: hidden;width:30px ;"  src="assets/images/elementType/heart.svg"><p class="elementString">Hjertesak</p></ion-label>
     <ion-radio value="cord"></ion-radio>
   </ion-item>
 
   <ion-item>
-    <ion-label>Pranks</ion-label>
+    <ion-label><img style=" border-radius: 0;
+    overflow: hidden;width:30px ;"  src="assets/images/elementType/fit.svg"><p class="elementString">Helse</p></ion-label>
     <ion-radio value="duesenberg"></ion-radio>
   </ion-item>
 
   <ion-item>
-    <ion-label>Helse og velvær</ion-label>
+    <ion-label><img style=" border-radius: 0;
+    overflow: hidden;width:30px "  src="assets/images/elementType/fire.svg"><p class="elementString">Trendy</p></ion-label>
     <ion-radio value="hudson"></ion-radio>
   </ion-item>
 
   <ion-item>
-    <ion-label>Trendy</ion-label>
+    <ion-label><img style=" border-radius: 0;
+    overflow: hidden;width:30px; "  src="assets/images/elementType/creative.svg"><p class="elementString">Selvmestring</p></ion-label>
     <ion-radio value="packard"></ion-radio>
   </ion-item>
 
  <ion-item>
-    <ion-label>Toxic</ion-label>
-    <ion-radio value="packard"></ion-radio>
+    <ion-label>
+      <img style=" border-radius: 0;
+    overflow: hidden;width:30px ;"  src="assets/images/elementType/toxic.svg"><p class="elementString">Toxic</p></ion-label>
+    <ion-radio value="packard">
+
+    </ion-radio>
   </ion-item>
+
+</div>
+
 </ion-list>
 
 
@@ -82,11 +93,48 @@
 
 
   </ion-list>
- 
-<ion-item>
-    <ion-label floating>Points</ion-label>
-    <ion-input type="number"></ion-input>
+
+
+
+  <ion-list radio-group [(ngModel)]="autoManufacturers2">
+
+  <ion-list-header class="primary">
+   Poeng
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>80</ion-label>
+    <ion-radio value="cord"></ion-radio>
   </ion-item>
+
+  <ion-item>
+    <ion-label>90</ion-label>
+    <ion-radio value="duesenberg"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>100</ion-label>
+    <ion-radio value="hudson"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>110</ion-label>
+    <ion-radio value="packard"></ion-radio>
+  </ion-item>
+
+ <ion-item>
+    <ion-label>120</ion-label>
+    <ion-radio value="packard"></ion-radio>
+  </ion-item>
+</ion-list>
+
+
+
+
+
+
+ 
+
     
 <div>
 <button ion-button full>Lag ny strike</button>
