@@ -19,7 +19,7 @@ export class StrikesComponent {
   strikes: FirebaseListObservable<any[]>;
 
   constructor(afConnection:AngularFireDatabase) {
-      this.strikes = afConnection.list("/strikeItems");
+      this.strikes = afConnection.list("/strikeListItems");
   }
 
 
