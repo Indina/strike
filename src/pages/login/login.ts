@@ -2,24 +2,13 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-newstrike',
-  templateUrl: 'newstrike.html'
+  selector: 'page-login',
+  templateUrl: 'login.html'
 })
-export class NewStrikePage {
+export class LogInPage {
 
   constructor(public navCtrl: NavController) {
 
-    
-console.log('new strike is loaDING');
-
-
-
-
   }
 
-
-
-
-
 }
-

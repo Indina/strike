@@ -3,16 +3,14 @@
 <ion-card *ngFor="let strike of strikes | async">
 <ion-list>
   <ion-item-sliding #item>
+    
      <ion-item (click)="strikeGroup()">
 
        <ion-avatar item-left>
 
-      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/right-arrow.svg">
+    
      <img style=" border-radius: 0;
-    overflow: hidden;    width: 20px;
-    height: 20px; " src="assets/icon/left-arrow.svg">
+    overflow: hidden;     " src="assets/icon/tick4.svg">
     </ion-avatar>
      <p style="position: absolute;right: 15px;">4 days left</p>
     <h2>{{strike.title}}</h2>
@@ -36,6 +34,17 @@
 
 
 <ion-card>
+<ion-item>
+    <ion-avatar item-left>
+      <img style=" border-radius: 0;
+    overflow: hidden;" src="assets/icon/icon.svg">
+    </ion-avatar>
+      <p style="position: absolute;right: 15px;">4 days left</p>
+    <h2>You have a new strike</h2>
+    <p>From Stephan Pedersen</p>
+  </ion-item>
+
+
 
   <ion-item>
     <ion-avatar item-left>
