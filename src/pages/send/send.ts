@@ -10,7 +10,7 @@ export class SendPage {
   constructor(public navCtrl: NavController) {
 
     
-
+console.log('new strike is loaDING');
 
 
 

@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
+ 
 import { StrikeListPage } from '../pages/strikeList/strikeList';
 import { StrikePage } from '../pages/strike/strike';
 import { HomePage } from '../pages/home/home';
@@ -16,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { StrikesComponent } from '../components/strikes/strikes';
+import { LogInPage } from '../pages/login/login';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCQKyGrADrwvWaXsBBqCqcx8DEbrtjhmoA",
@@ -34,6 +35,7 @@ export const firebaseConfig = {
     HomePage,
     TabsPage,
     SendPage,
+    LogInPage,
     WallPage,
     StrikeGroupPage,
     NewStrikePage,
@@ -55,6 +57,7 @@ export const firebaseConfig = {
     HomePage,
     SendPage,
     WallPage,
+    LogInPage,
     TabsPage,
     StrikeGroupPage,
     NewStrikePage,

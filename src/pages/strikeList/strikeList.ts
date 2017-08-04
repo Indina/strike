@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import{NewStrikePage} from '../newstrike/newstrike';
-import{StrikeGroupPage} from '../strikegroup/strikegroup';
-
+import{ProfilePage} from '../profile/profile';
 
 
 @Component({
@@ -21,6 +20,10 @@ export class StrikeListPage {
   }
 
 
+profile(){
+this.navCtrl.push(ProfilePage);
+
+}
 
 newStrike(){
 this.navCtrl.push(NewStrikePage);
@@ -28,10 +31,7 @@ this.navCtrl.push(NewStrikePage);
 }
 
 
-strikeGroup(){
-this.navCtrl.push(StrikeGroupPage);
 
-}
 
 
 

@@ -177,3 +177,7 @@ ion-app.md {
     padding: 0;
     color: #f30648;
 }
+
+.item-ios.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: 0px;}
