@@ -3,12 +3,12 @@
 <ion-card *ngFor="let strike of strikes | async">
 <ion-list>
   <ion-item-sliding #item>
-    
+
      <ion-item (click)="strikeGroup()">
 
        <ion-avatar item-left>
 
-    
+
      <img style=" border-radius: 0;
     overflow: hidden;     " src="assets/icon/tick4.svg">
     </ion-avatar>
@@ -32,97 +32,14 @@
 
 
 
-
-<ion-card>
+<ion-card *ngFor="let strike of strikes | async">
 <ion-item>
     <ion-avatar item-left>
       <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/icon/icon.svg">
+    overflow: hidden;" [src]="strike.typeImgSrc">
     </ion-avatar>
       <p style="position: absolute;right: 15px;">4 days left</p>
     <h2>You have a new strike</h2>
     <p>From Stephan Pedersen</p>
   </ion-item>
-
-
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/elementType/fire.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/elementType/fit.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/elementType/creative.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/elementType/toxic.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
-</ion-card>
-
-
-<ion-card>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;" src="assets/images/elementType/heart.svg">
-    </ion-avatar>
-      <p style="position: absolute;right: 15px;">4 days left</p>
-    <h2>You have a new strike</h2>
-    <p>From Stephan Pedersen</p>
-  </ion-item>
-
-
-
 </ion-card>

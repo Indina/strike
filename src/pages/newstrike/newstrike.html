@@ -1,7 +1,7 @@
 <ion-header >
   <ion-navbar style="    background-color: #f30648;">
     <ion-title>
-  
+
   <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
     </div>
     </ion-title>
@@ -15,10 +15,7 @@
 
 <div  class="image-upload" style="display: inline;">
     <label for="file-input">
-      <img  style="    width: 100%;
-    height: 420px;
-    
-    padding: 20px;
+      <img  style="padding: 20px;
     background-color: #e4e4e4;
       display: inline;" id="myimage" src="assets/icon/photo-camera.svg"/>
     </label>
@@ -30,64 +27,53 @@
 
 <ion-item>
     <ion-label  floating class="list-header">Tittel</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="title" ></ion-input>
   </ion-item>
 
 
   <ion-item>
-       <ion-label floating  class="list-header">Ingress</ion-label>
-    <ion-textarea style="min-height:200px" ></ion-textarea>
+       <ion-label floating  class="list-header" >Beskrivelse</ion-label>
+    <ion-textarea style="min-height:200px" [(ngModel)]="description"   ></ion-textarea>
   </ion-item>
-  
 
 
 
-<ion-list radio-group [(ngModel)]="autoManufacturers">
+
+<ion-list radio-group [(ngModel)]="selectedStrikeType">
 
   <ion-list-header class="primary" >
-    Element
+    Kategori
   </ion-list-header>
-<div >
-  <ion-item>
-    <ion-label><img style=" border-radius: 0;
-    overflow: hidden;width:30px ;"  src="assets/images/elementType/heart.svg"><p class="elementString">Hjertesak</p></ion-label>
-    <ion-radio value="cord"></ion-radio>
+
+
+  <ion-item  *ngFor="let strikeType of strikeTypes " >
+    <ion-label><img style=" border-radius: 0; overflow: hidden;width:30px ;"  [src]="strikeType.imgSrc"><p class="elementString">{{strikeType.name}}</p></ion-label>
+    <ion-radio  [value]="strikeType"></ion-radio>
   </ion-item>
 
-  <ion-item>
-    <ion-label><img style=" border-radius: 0;
-    overflow: hidden;width:30px ;"  src="assets/images/elementType/fit.svg"><p class="elementString">Helse</p></ion-label>
-    <ion-radio value="duesenberg"></ion-radio>
-  </ion-item>
 
-  <ion-item>
-    <ion-label><img style=" border-radius: 0;
-    overflow: hidden;width:30px "  src="assets/images/elementType/fire.svg"><p class="elementString">Trendy</p></ion-label>
-    <ion-radio value="hudson"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-    <ion-label><img style=" border-radius: 0;
-    overflow: hidden;width:30px; "  src="assets/images/elementType/creative.svg"><p class="elementString">Selvmestring</p></ion-label>
-    <ion-radio value="packard"></ion-radio>
-  </ion-item>
-
- <ion-item>
-    <ion-label>
-      <img style=" border-radius: 0;
-    overflow: hidden;width:30px ;"  src="assets/images/elementType/toxic.svg"><p class="elementString">Toxic</p></ion-label>
-    <ion-radio value="packard">
-
-    </ion-radio>
-  </ion-item>
-
-</div>
 
 </ion-list>
 
 
 
 
+
+<ion-list radio-group [(ngModel)]="selectedStrikePoint">
+
+  <ion-list-header class="primary" >
+    Poeng
+  </ion-list-header>
+
+
+  <ion-item  *ngFor="let strikePoint of strikePoints " >
+    <ion-label>{{strikePoint.value}}</ion-label>
+    <ion-radio  [value]="strikePoint"></ion-radio>
+  </ion-item>
+
+
+
+</ion-list>
 
 
 
@@ -96,48 +82,16 @@
 
 
 
-  <ion-list radio-group [(ngModel)]="autoManufacturers2">
-
-  <ion-list-header class="primary">
-   Poeng
-  </ion-list-header>
-
-  <ion-item>
-    <ion-label>80</ion-label>
-    <ion-radio value="cord"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>90</ion-label>
-    <ion-radio value="duesenberg"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>100</ion-label>
-    <ion-radio value="hudson"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>110</ion-label>
-    <ion-radio value="packard"></ion-radio>
-  </ion-item>
-
- <ion-item>
-    <ion-label>120</ion-label>
-    <ion-radio value="packard"></ion-radio>
-  </ion-item>
-</ion-list>
 
 
 
 
 
 
- 
 
-    
+
 <div>
-<button ion-button full>Lag ny strike</button>
+<button ion-button full (click)="save()">Lag ny strike</button>
 </div>
 
 

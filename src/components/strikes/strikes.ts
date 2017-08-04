@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {FirebaseListObservable} from 'angularfire2/database';
 
 /**
  * Generated class for the StrikesComponent component.
@@ -16,10 +16,9 @@ export class StrikesComponent {
 
   text: string;
 
-  strikes: FirebaseListObservable<any[]>;
+  @Input() strikes: FirebaseListObservable<any[]>;
 
-  constructor(afConnection:AngularFireDatabase) {
-      this.strikes = afConnection.list("/strikeListItems");
+  constructor() {
   }
 
 
