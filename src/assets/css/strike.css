@@ -45,6 +45,10 @@ ion-app.md {
    
 }
 
+h2{
+font-weight: 100!important;
+
+}
 
  .home-content {
     position: absolute;

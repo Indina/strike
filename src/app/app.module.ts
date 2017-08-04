@@ -17,6 +17,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { StrikesComponent } from '../components/strikes/strikes';
 import { LogInPage } from '../pages/login/login';
+import { ProfilePage } from '../pages/profile/profile';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCQKyGrADrwvWaXsBBqCqcx8DEbrtjhmoA",
@@ -37,6 +39,7 @@ export const firebaseConfig = {
     SendPage,
     LogInPage,
     WallPage,
+    ProfilePage,
     StrikeGroupPage,
     NewStrikePage,
     StrikesComponent,
@@ -57,6 +60,7 @@ export const firebaseConfig = {
     HomePage,
     SendPage,
     WallPage,
+    ProfilePage,
     LogInPage,
     TabsPage,
     StrikeGroupPage,

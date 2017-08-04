@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
-//import {StrikeItem} from '../../model/strikeItem';
+
 
 
 
@@ -12,7 +11,9 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 export class ProfilePage {
 
   
+constructor(public navCtrl: NavController) {
 
+  }
 
 }
 
