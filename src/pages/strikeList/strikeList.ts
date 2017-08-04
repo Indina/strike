@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {FirebaseListObservable} from 'angularfire2/database';
 import{NewStrikePage} from '../newstrike/newstrike';
 import{ProfilePage} from '../profile/profile';
+import { DatabaseProvider } from "../../providers/databaseserver/databaseserver";
 
 
 @Component({
@@ -11,12 +12,13 @@ import{ProfilePage} from '../profile/profile';
 })
 export class StrikeListPage {
 
-  strikeList: FirebaseListObservable<any[]>;
+  strikes: FirebaseListObservable<any[]>;
+
 
   pakker:string ="strikes";
 
-  constructor(public navCtrl: NavController, afConnection:AngularFireDatabase) {
-      this.strikeList = afConnection.list("/strikeListItems");
+  constructor(public navCtrl: NavController, db:DatabaseProvider) {
+      this.strikes = db.allStrikes();
   }
 
 
