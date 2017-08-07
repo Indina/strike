@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SendPage } from '../pages/send/send';
 import { WallPage } from '../pages/wall/wall';
+import { SettingsPage } from '../pages/settings/settings';
 import { NewStrikePage } from '../pages/newstrike/newstrike';
 import { StrikeGroupPage } from '../pages/strikegroup/strikegroup';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -37,6 +38,7 @@ export const firebaseConfig = {
     StrikeListPage,
     StrikePage,
     HomePage,
+    SettingsPage,
     TabsPage,
     SendPage,
     LogInPage,
@@ -64,6 +66,7 @@ export const firebaseConfig = {
     SendPage,
     WallPage,
     ProfilePage,
+    SettingsPage,
     LogInPage,
     TabsPage,
     StrikeGroupPage,
@@ -77,3 +80,5 @@ export const firebaseConfig = {
   ]
 })
 export class AppModule {}
+
+

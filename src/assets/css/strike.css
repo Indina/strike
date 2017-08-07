@@ -1,6 +1,4 @@
-    border-color: #b2b2b2;
-      background-color: #f30648;
-}
+
 
 .item-md ion-avatar img {
     width: 30px;
@@ -14,8 +12,8 @@ ion-app.md {
 }
 
 .checkbox-md-dark .checkbox-checked {
-    border-color: #f30648;
-    background-color: #f30648;
+    border-color:  #967fce;
+    background-color:  #967fce;
 }
 
 .image-upload > input
@@ -89,14 +87,14 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
 }
 
 .segment-md .segment-button.segment-activated {
-    border-color: #ffcd00;
+    border-color: #967fce;
     opacity: 1;
 }
 
 
 .segment-md .segment-button {
     
-    color: #ffcd00;
+    color: #967fce;
 
 }
 
@@ -110,12 +108,12 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
 }
 
 .toolbar-background {
-    background:#b7af90!important;
+    background:#967fce !important;
 }
 
 .platform-ios .segment-ios .segment-button.segment-activated {
     color: #fff;
-    background-color:#ffcd00;
+    background-color:#967fce;
     opacity: 1;
     transition: 100ms all linear;
 }
@@ -129,10 +127,10 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
     height: 3.2rem;
     border-width: 1px;
     border-style: solid;
-    border-color:#ffcd00;
+    border-color:#967fce;
     font-size: 1.3rem;
     line-height: 3rem;
-    color: #ffcd00;
+    color: #967fce;
     background-color: transparent;
 }
 
@@ -179,15 +177,20 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
 
 
  .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
-    color:#ffcd00;
+    color:#967fce;
 }
 
 
 .tabs-md .tab-button[aria-selected=true] {
     padding: 0;
-    color: #ffcd00;
+    color: #967fce;
 }
 
 .item-ios.item-block .item-inner {
     padding-right: 8px;
     border-bottom: 0px;}
+
+
+    .toggle-ios.toggle-checked .toggle-icon {
+    background-color: #967fce;
+}

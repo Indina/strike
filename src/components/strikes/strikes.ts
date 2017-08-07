@@ -19,6 +19,7 @@ export class StrikesComponent {
   @Input() strikes: FirebaseListObservable<any[]>;
 
   constructor() {
+    
   }
 
 

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import{SettingsPage} from '../settings/settings';
+
 
 
 
@@ -13,9 +15,18 @@ export class ProfilePage {
   
 constructor(public navCtrl: NavController) {
 
-  }
+}
+
+
+
+settings(){
+this.navCtrl.push(SettingsPage);
 
 }
+
+
+}
+
 
 
 
