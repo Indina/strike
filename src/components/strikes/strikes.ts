@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-
+import { NavController } from 'ionic-angular';
 import {FirebaseListObservable} from 'angularfire2/database';
+import{StrikeGroupPage} from '../../pages/strikegroup/strikegroup';
 
 /**
  * Generated class for the StrikesComponent component.
@@ -11,20 +12,38 @@ import {FirebaseListObservable} from 'angularfire2/database';
 @Component({
   selector: 'strikes',
   templateUrl: 'strikes.html'
+
+
+
+
+
+  
 })
+
+
+
+
+  
+
+
 export class StrikesComponent {
+
+
+ 
 
   text: string;
 
   @Input() strikes: FirebaseListObservable<any[]>;
 
-  constructor() {
+  constructor(public navCtrl: NavController) {
+
+    
     
   }
 
 
   strikeGroup(){
-
+this.navCtrl.push(StrikeGroupPage);
   }
 
   favorite(){}

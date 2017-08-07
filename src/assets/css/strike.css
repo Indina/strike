@@ -1,8 +1,7 @@
 
-
-.item-md ion-avatar img {
-    width: 30px;
-    height: 30px;
+.item-ios ion-avatar ion-img, .item-ios ion-avatar img{
+  width: 20px;
+    height: 20px;
     border-radius: 0;
     overflow: hidden;
 }
