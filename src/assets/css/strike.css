@@ -89,14 +89,14 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
 }
 
 .segment-md .segment-button.segment-activated {
-    border-color: #f30648;
+    border-color: #ffcd00;
     opacity: 1;
 }
 
 
 .segment-md .segment-button {
     
-    color: #f30648;
+    color: #ffcd00;
 
 }
 
@@ -110,12 +110,12 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
 }
 
 .toolbar-background {
-    background: #f30648!important;
+    background:#b7af90!important;
 }
 
 .platform-ios .segment-ios .segment-button.segment-activated {
     color: #fff;
-    background-color: #f30648;
+    background-color:#ffcd00;
     opacity: 1;
     transition: 100ms all linear;
 }
@@ -129,10 +129,10 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
     height: 3.2rem;
     border-width: 1px;
     border-style: solid;
-    border-color: #f30648;
+    border-color:#ffcd00;
     font-size: 1.3rem;
     line-height: 3rem;
-    color: #f30648;
+    color: #ffcd00;
     background-color: transparent;
 }
 
@@ -179,14 +179,13 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
 
 
  .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
-    color: #f30648;
-   
+    color:#ffcd00;
 }
 
 
 .tabs-md .tab-button[aria-selected=true] {
     padding: 0;
-    color: #f30648;
+    color: #ffcd00;
 }
 
 .item-ios.item-block .item-inner {
