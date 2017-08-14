@@ -12,6 +12,7 @@ import { WallPage } from '../pages/wall/wall';
 import { SettingsPage } from '../pages/settings/settings';
 import { NewStrikePage } from '../pages/newstrike/newstrike';
 import { StrikeGroupPage } from '../pages/strikegroup/strikegroup';
+import { ServicesPage } from '../pages/services/services';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
@@ -41,6 +42,7 @@ export const firebaseConfig = {
     SettingsPage,
     TabsPage,
     SendPage,
+    ServicesPage,
     LogInPage,
     WallPage,
     ProfilePage,
@@ -63,6 +65,7 @@ export const firebaseConfig = {
     StrikeListPage,
     StrikePage,
     HomePage,
+    ServicesPage,
     SendPage,
     WallPage,
     ProfilePage,

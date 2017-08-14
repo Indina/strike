@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import{SettingsPage} from '../settings/settings';
 
+import{ServicesPage} from '../services/services';
 
 
 
@@ -24,6 +25,10 @@ this.navCtrl.push(SettingsPage);
 
 }
 
+services(){
+this.navCtrl.push(ServicesPage);
+
+}
 
 }
 
