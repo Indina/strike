@@ -22,28 +22,14 @@ ion-app.md {
 
 .card-md {
     margin-bottom: 2px;
-    margin: 0px 0px 0px 0px;
-    width: calc(100%);
+    margin: 12px;
+   
     border-radius: 2px;
     font-size: 1.4rem;
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0.07);
 }
-.card-md {
-    margin-bottom: 2px;
-    margin: 0px 0px 0px 0px;
-    width: calc(100%);
-    border-radius: 2px;
-    font-size: 1.4rem;
-    background: #fff;
-    box-shadow: 0 2px 2px 0 rgba(31, 27, 27, 0.09), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
-    margin-bottom: 3px;
-   
-}
-.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {
-     border-style: none; 
-     border-color: rgba(0, 0, 0, 0.3);
-}
+
 h2{
 font-weight: 100!important;
 
@@ -214,3 +200,28 @@ color:#967fce;
 
 
 }
+
+@media only screen and (min-width: 1025px) {
+    .scroll-content:not(.show-scrollbar) {
+        margin-right: -17px;
+        overflow-y: scroll;
+    }
+}
+
+
+ #card-stack {
+    width: 90%;
+    height: 200px;
+    background: #047915;
+    border: 10px solid #4cb338;
+    margin: 100px auto 0;
+    position: relative;
+  }
+ 
+  #card-stack ion-card {
+    border-radius: 5px;
+    position: absolute;
+    text-align: center;
+    top: 3%;
+    height: 90%;
+  }

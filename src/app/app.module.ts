@@ -22,7 +22,7 @@ import { LogInPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { DatabaseProvider } from '../providers/databaseserver/databaseserver';
 import { HttpModule } from "@angular/http";
-
+import { SwingModule } from 'angular2-swing';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCQKyGrADrwvWaXsBBqCqcx8DEbrtjhmoA",
@@ -55,6 +55,7 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     HttpModule,
+    SwingModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
