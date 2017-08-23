@@ -100,9 +100,9 @@ voteUp(like: boolean) {
   let removedCard = this.cards.pop();
  
   if (like) {
-    this.recentCard = 'You liked: ' ;
+   
   } else {
-    this.recentCard = 'You disliked: ' ;
+     this.navCtrl.push(SendPage);
   }
 }
  
